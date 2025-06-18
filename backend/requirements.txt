@@ -1,0 +1,19 @@
+# --- Core Web Application Framework ---
+# For running the API server (main.py)
+Flask
+Flask-Cors
+gunicorn
+
+# --- Database Driver ---
+# For connecting to MongoDB. The [srv] option includes extra
+# dependencies needed to connect to MongoDB Atlas.
+pymongo[srv]
+
+# --- Google Gemini LLM API Client ---
+# The official library to interact with the Gemini API (free tier).
+google-generativeai
+
+# --- Utilities ---
+
+# For handling SSL certificates with MongoDB Atlas, a good practice.
+certifi

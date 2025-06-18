@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "EcoShop - Sustainability Shopping Companion",
+  "version": "1.0",
+  "description": "Get real-time information about the environmental sustainability of brands and products as you shop online",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "downloads",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://*.shopee.sg/*",
+    "https://*.shopee.com/*",
+    "http://localhost:5000/*",
+    "https://localhost:5000/*",
+    "https://api.lxkhome.duckdns.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.shopee.sg/*",
+        "https://*.shopee.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "options_page": "options/options.html"
+}

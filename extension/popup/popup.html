@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoShop</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="website-badge" id="website-badge">shopee.sg</div>
+      <h1>EcoShop</h1>
+      <p class="tagline">Sustainable Shopping Companion</p>
+    </header>
+      <div id="loading" class="loading-container">
+      <div class="loader"></div>
+      <p id="loading-message">Fetching data from database...</p>
+    </div>
+    
+    <div id="no-product" class="hidden">
+      <div class="message-container">
+        <p>Please navigate to a product page to see sustainability information.</p>
+      </div>
+    </div>
+    
+    <div id="product-info" class="hidden">      <div class="brand-container">
+        <h2 id="brand-name">Loading...</h2>
+        <div class="score-badge">
+          <span id="score-value">...</span>
+          <span>/100</span>
+        </div>
+      </div>
+        <div class="sustainability-metrics" id="sustainability-metrics-container">
+        <!-- Metrics will be dynamically inserted here by popup.js -->
+      </div>
+      
+      <button id="show-details" class="details-button" style="width:100%;margin:16px 0 0 0;">Show Details</button>
+      
+      <button id="show-recommendations" class="recommendations-button" style="width:100%;margin:8px 0 0 0;">View Recommendations</button>
+      
+      <div class="alternatives-container">
+        <h3>Greener Alternatives</h3>
+        <div id="alternatives-list">
+          <!-- Alternatives will be added here dynamically -->
+        </div>
+      </div>
+    </div>      <footer>
+      <button id="options-button">Settings</button>
+      <button id="learn-more">Learn More</button>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

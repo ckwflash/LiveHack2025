@@ -292,3 +292,41 @@ EcoShop helps users make more sustainable shopping choices by:
 - **Development**: See code comments for technical implementation details
 
 **Happy sustainable shopping!** 🛒🌱
+
+---
+
+## 🛠️ Running Your Own EcoShop Backend Instance
+
+If you want to run your own instance of the EcoShop backend:
+
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/ckwflash/LiveHack2025.git
+   ```
+2. **Configure API Details**
+   - Open `backend/config.py` and insert your API keys or configuration as needed.
+
+3. **Switch the Extension to Use Your Local Backend**
+   - Open `extension/service_worker.js`
+   - Find these lines near the top (line 20-21):
+     ```js
+     const API_BASE_URL = 'https://api.lxkhome.duckdns.org'; // Previous public URL
+     // const API_BASE_URL = 'http://127.0.0.1:5000'; // For local development
+     ```
+   - Comment the first line and uncomment the second line:
+     ```js
+     // const API_BASE_URL = 'https://api.lxkhome.duckdns.org'; // Previous public URL
+     const API_BASE_URL = 'http://127.0.0.1:5000'; // For local development
+     ```
+   - Save your changes.
+
+4. **Start the Backend Server**
+   ```sh
+   cd backend
+   python app.py
+   ```
+
+5. **Install the Extension as Usual**
+   - Follow the instructions above to load the extension in your browser.
+
+Your extension will now communicate with your local backend instance!

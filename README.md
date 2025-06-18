@@ -321,12 +321,17 @@ If you want to run your own instance of the EcoShop backend:
    - Save your changes.
 
 4. **Start the Backend Server**
+   Install dependencies
+   ```sh
+   pip install -r backend/requirements.txt
+   ```
+   Start the server
    ```sh
    cd backend
    python app.py
    ```
 
-5. **Install the Extension as Usual**
+6. **Install the Extension as Usual**
    - Follow the instructions above to load the extension in your browser.
 
 Your extension will now communicate with your local backend instance!

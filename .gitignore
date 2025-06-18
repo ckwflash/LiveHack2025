@@ -1,0 +1,5 @@
+backend/config.py
+backend/scripts/config.py
+backend/__pycache__
+backend/scripts/__pycache__
+backend/entry.txt

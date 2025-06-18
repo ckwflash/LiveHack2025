@@ -15,8 +15,8 @@
 #### **Installation Steps:**
 
 1. **Download the Extension**
-   - Download or clone this repository to your computer
-   - Locate the `extension` folder in the project directory
+   - Download the Extension.zip from the release tab
+   - Extract the Extension folder to any folder such as downloads
 
 2. **Enable Developer Mode**
    - Open your Chromium browser (Chrome, Edge, etc.)
@@ -25,7 +25,7 @@
 
 3. **Load the Extension**
    - Click **"Load unpacked"** button
-   - Navigate to and select the `extension` folder from this project
+   - Navigate to and select the `extension` folder
    - The EcoShop extension icon should appear in your browser toolbar
 
 4. **Verify Installation**
